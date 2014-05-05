@@ -1,0 +1,1 @@
+Dokumentklasse für FHNW Projektarbeiten. Geeignet für längere Dokumente mit Titelseite, Inhaltsverzeichnis, Quellenverzeichnis und Anhang. Zitierstil ist Harvard (z.B. (Einstein 1905) ). Basiert auf "article".

@@ -32,6 +32,9 @@
 \RequirePackage{tikz}							% Grafiken erstellen
 \RequirePackage{setspace}						% Zeilenabstand verändern
 \RequirePackage[toc,page]{appendix}				% Anhang erstellen
+\RequirePackage{pdflscape}						% Einzelne Seiten in Querformat
+\RequirePackage{longtable}						% Mehrseitige Tabellen
+\RequirePackage{xr}								% Referenzen auf externe Dokumente
 
 
 \pagestyle{fancy}								% Seitenstil 'fancy' (mit Header)

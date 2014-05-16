@@ -9,17 +9,16 @@
 \LoadClass[a4paper]{article}
 
 
-\RequirePackage[margin=2.5cm]{geometry}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage{graphicx}
-\RequirePackage[backend=bibtex]{biblatex}
-\RequirePackage{fancyhdr}
-\RequirePackage{filecontents}
-\RequirePackage[ngerman]{babel}
-\RequirePackage[ngerman]{cleveref}
-\RequirePackage{textcomp}
-\RequirePackage{placeins}
-\RequirePackage{capt-of}
+\RequirePackage[margin=2.5cm]{geometry}				% Seitenformat
+\RequirePackage[utf8]{inputenc}						% Umlaute im Quelltext
+\RequirePackage{graphicx}							% Bilder einfügen
+\RequirePackage[backend=bibtex]{biblatex}			% Bibliographie
+\RequirePackage{fancyhdr}							% Kopf- und Fusszeile
+\RequirePackage[ngerman]{babel}						% Sprache auf 'Deutsch' einstellen
+\RequirePackage[ngerman]{cleveref}					% Packet für bessere Referenzen (besser als hyperref)
+\RequirePackage{textcomp}							% Symbole
+\RequirePackage{placeins}							% Floatbarriere
+\RequirePackage{capt-of}							% Beschriftung ohne Float-Umgebung
 \RequirePackage{longtable}
 \RequirePackage{lscape}
 \RequirePackage{pdfpages}

@@ -35,6 +35,13 @@
 \RequirePackage{pdflscape}						% Einzelne Seiten in Querformat
 \RequirePackage{longtable}						% Mehrseitige Tabellen
 \RequirePackage{xr}								% Referenzen auf externe Dokumente
+\RequirePackage{tikz}							% Zeichnen
+\RequirePackage{capt-of}						% Beschriftungen ausserhalb von Float-Umgebungen
+\RequirePackage{verbatim}						% Kommentarblöcke
+
+
+% TikZ Bibliotheken
+\usetikzlibrary{shapes, arrows, calc, intersections, through}
 
 
 \pagestyle{fancy}								% Seitenstil 'fancy' (mit Header)

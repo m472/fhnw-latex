@@ -38,7 +38,7 @@
 \RequirePackage{tikz}							% Zeichnen
 \RequirePackage{capt-of}						% Beschriftungen ausserhalb von Float-Umgebungen
 \RequirePackage{verbatim}						% Kommentarblöcke
-
+\RequirePackage[bottom]{footmisc}               % Fussnoten am Ende der Seite
 
 % TikZ Bibliotheken
 \usetikzlibrary{shapes, arrows, calc, intersections, through}

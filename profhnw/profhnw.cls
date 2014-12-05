@@ -6,7 +6,7 @@
 
 \ProcessOptions\relax
 
-\LoadClass[a4paper]{article}
+\LoadClass[a4paper, fleqn]{article}
 
 \RequirePackage[utf8]{inputenc}					% Umlaute im Quelltext
 \RequirePackage[margin=2.5cm]{geometry}			% Seitenformat
@@ -87,5 +87,8 @@
 \lfoot{\today}												% Fusszeile links											
 \cfoot{\@author}											% Fusszeile mittig
 \rfoot{\thepage}											% Fusszeile rechts
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 
 \endinput

@@ -39,6 +39,10 @@
 \RequirePackage{capt-of}						% Beschriftungen ausserhalb von Float-Umgebungen
 \RequirePackage{verbatim}						% Kommentarblöcke
 \RequirePackage[bottom]{footmisc}               % Fussnoten am Ende der Seite
+\RequirePackage{lipsum}							% Fülltext
+\RequirePackage{subcaption}						% Beschriftungen von mehreren zusammengehörigen Bildern
+\RequirePackage[font={small,it}]{caption}		% Bildlegenden kursiv und etwas kleiner als Text
+\RequirePackage[parfill]{parskip}				% Extra-Linespace statt Einrückung zwischen den Absätzen
 
 % TikZ Bibliotheken
 \usetikzlibrary{shapes, arrows, calc, intersections, through}
@@ -48,6 +52,7 @@
 \setlength{\headheight}{26pt}					% Header so hoch machen, dass das FHNW-Logo reinpasst
 \setstretch{1.2}								% 1.2fache Zeilenabstände
 \setlength\bibnamesep{1.5\itemsep}				% Grösserer Abstand zwischen Bibliographie-Einträgen
+\setlength{\jot}{5pt}							% Grösserer Abstand zwischen Gleichungen
 
 % Konfiguration Biblatex gemäss Vorgaben im Leitfaden
 \DeclareNameAlias{sortname}{last-first}

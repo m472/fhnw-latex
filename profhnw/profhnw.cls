@@ -56,7 +56,7 @@
 \DeclareFieldFormat[online]{url}{\newline \textsc{Url:} \url{#1}}
 
 % o.J. für Einträge mit fehlendem Datum
-\newcommand{\mkbibnodate}{o\adddot J\adddot}
+\newcommand{\mkbibnodate}{o\adddot\,J\adddot}
 \AtEveryCitekey{\iffieldundef{labelyear}{\restorefield{labelyear}{\mkbibnodate}}{}}
 \AtEveryBibitem{\iffieldundef{labelyear}{\restorefield{year}{\mkbibnodate}}{}}
 

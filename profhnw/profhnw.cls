@@ -6,7 +6,7 @@
 
 \ProcessOptions\relax
 
-\LoadClass[a4paper]{article}
+\LoadClass[a4paper, fleqn]{article}
 
 \RequirePackage[utf8]{inputenc}					% Umlaute im Quelltext
 \RequirePackage[margin=2.5cm]{geometry}			% Seitenformat
@@ -38,6 +38,12 @@
 \RequirePackage{tikz}							% Zeichnen
 \RequirePackage{capt-of}						% Beschriftungen ausserhalb von Float-Umgebungen
 \RequirePackage{verbatim}						% Kommentarblöcke
+\RequirePackage[bottom]{footmisc}               % Fussnoten am Ende der Seite
+\RequirePackage{lipsum}							% Fülltext
+\RequirePackage{subcaption}						% Beschriftungen von mehreren zusammengehörigen Bildern
+\RequirePackage[font={small,it}]{caption}		% Bildlegenden kursiv und etwas kleiner als Text
+\RequirePackage[parfill]{parskip}				% Extra-Linespace statt Einrückung zwischen den Absätzen
+\RequirePackage{colortbl}						% Farben in Tabellen
 
 
 % TikZ Bibliotheken
@@ -48,6 +54,7 @@
 \setlength{\headheight}{26pt}					% Header so hoch machen, dass das FHNW-Logo reinpasst
 \setstretch{1.2}								% 1.2fache Zeilenabstände
 \setlength\bibnamesep{1.5\itemsep}				% Grösserer Abstand zwischen Bibliographie-Einträgen
+\setlength{\jot}{5pt}							% Grösserer Abstand zwischen Gleichungen
 
 % Konfiguration Biblatex gemäss Vorgaben im Leitfaden
 \DeclareNameAlias{sortname}{last-first}
@@ -87,5 +94,8 @@
 \lfoot{\today}												% Fusszeile links											
 \cfoot{\@author}											% Fusszeile mittig
 \rfoot{\thepage}											% Fusszeile rechts
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 
 \endinput

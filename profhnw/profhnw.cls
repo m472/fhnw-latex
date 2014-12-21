@@ -44,7 +44,7 @@
 \RequirePackage[font={small,it}]{caption}		% Bildlegenden kursiv und etwas kleiner als Text
 \RequirePackage[parfill]{parskip}				% Extra-Linespace statt Einrückung zwischen den Absätzen
 \RequirePackage{colortbl}						% Farben in Tabellen
-
+\RequirePackage{tikz-qtree}						% Baumdiagramme
 
 % TikZ Bibliotheken
 \usetikzlibrary{shapes, arrows, calc, intersections, through}

@@ -45,6 +45,7 @@
 \RequirePackage[parfill]{parskip}				% Extra-Linespace statt Einrückung zwischen den Absätzen
 \RequirePackage{colortbl}						% Farben in Tabellen
 \RequirePackage{tikz-qtree}						% Baumdiagramme
+\RequirePackage{tabularx} 						% für an Seitenbreite angepasste Tabelle
 
 % TikZ Bibliotheken
 \usetikzlibrary{shapes, arrows, calc, intersections, through}

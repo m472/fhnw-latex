@@ -1,0 +1,58 @@
+\documentclass{profhnw}
+
+\bibliography{example.bib} % Verweis auf Bibliographie
+
+\author{Hans Muster}
+\title{Test}
+
+\begin{document}
+\maketitle % Titelbild
+
+\section*{Abstract}
+\lipsum[1] % Fülltext
+
+\tableofcontents
+
+\section{Einleitung}
+\lipsum[2-3] % Fülltext
+
+\section{Hauptteil}
+\lipsum[5] 
+Quellenangabe mit Biblatex \parencites[S. 203]{Rowling:HarryPotter}.
+
+\subsection{Formeln}
+
+Der Satz von Steiner, siehe \cref{eq:SatzVonSteiner2}, gemäss \citeauthor{Papula:Band1} \parencite{Papula:Band1}.
+
+\begin{align}
+\label{eq:SatzVonSteiner2}
+J_A &= \frac{m}{12}\cdot l^{2} + m\cdot \left(\frac{l}{2}\right)^{2}
+\end{align}
+
+\begin{align}
+\label{eq:ROT_X}
+A_{x} &= \begin{bmatrix} 
+1 & 0 & 0\\ 
+0 & \cos{\alpha} & -\sin{\alpha}\\		
+0 & \sin{\alpha} & \cos{\alpha} 
+\end{bmatrix}
+\end{align}
+
+\subsection{Unterkapitel}
+\lipsum[4]
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{FHNW_HT}
+	\caption{Bild Floating}
+\end{figure}
+
+\begin{center}
+	\includegraphics[width=0.6\linewidth]{FHNW_HT}
+	\captionof{figure}{Bild ohne Float-Umgebung, wird genau da platziert wo es im Code steht}
+\end{center}
+
+\printbibliography
+
+
+\end{document}

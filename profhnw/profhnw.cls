@@ -57,6 +57,10 @@
 \setlength\bibnamesep{1.5\itemsep}				% Grösserer Abstand zwischen Bibliographie-Einträgen
 \setlength{\jot}{3pt}							% Grösserer Abstand zwischen Gleichungen
 
+% Tabellenbeschriftung oben
+\captionsetup[table]{font={normalfont,footnotesize}, singlelinecheck=off, position=above}
+
+
 % Konfiguration Biblatex gemäss Vorgaben im Leitfaden
 \DeclareNameAlias{sortname}{last-first}
 \DeclareNameAlias{default}{last-first}
@@ -96,7 +100,7 @@
 \cfoot{\@author}											% Fusszeile mittig
 \rfoot{\thepage}											% Fusszeile rechts
 
-\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
-\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}					% Betrag
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}				% Norm eines Vektors
 
 \endinput

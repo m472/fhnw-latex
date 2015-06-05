@@ -17,7 +17,7 @@
 \RequirePackage{graphicx} 	 					% Grafiken
 \RequirePackage{amsmath} 						% Mathematische Formeln
 \RequirePackage{mathtools}						% Funktionserweiterung für amsmath
-\RequirePackage[ngerman]{cleveref}				% Packet für bessere Referenzen (besser als hyperref)
+\RequirePackage[ngerman, noabbrev]{cleveref}	% Packet für bessere Referenzen (besser als hyperref)
 \RequirePackage{setspace} 						% Zeilenabstand Einstellen
 \RequirePackage[nottoc,numbib]{tocbibind}		% Literaturverzeichnis im Inhaltsverzeichnis
 \RequirePackage{pdfpages}						% PDFs anhängen
@@ -55,7 +55,7 @@
 \setlength{\headheight}{26pt}					% Header so hoch machen, dass das FHNW-Logo reinpasst
 \setstretch{1.2}								% 1.2fache Zeilenabstände
 \setlength\bibnamesep{1.5\itemsep}				% Grösserer Abstand zwischen Bibliographie-Einträgen
-\setlength{\jot}{5pt}							% Grösserer Abstand zwischen Gleichungen
+\setlength{\jot}{3pt}							% Grösserer Abstand zwischen Gleichungen
 
 % Konfiguration Biblatex gemäss Vorgaben im Leitfaden
 \DeclareNameAlias{sortname}{last-first}

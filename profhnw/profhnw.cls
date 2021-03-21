@@ -21,7 +21,7 @@
 \RequirePackage{setspace} 						% Zeilenabstand Einstellen
 \RequirePackage[nottoc,numbib]{tocbibind}		% Literaturverzeichnis im Inhaltsverzeichnis
 \RequirePackage{pdfpages}						% PDFs anhängen
-\RequirePackage[backend=bibtex, 
+\RequirePackage[backend=biber, 
 				style=authoryear]
 			   {biblatex}						% Bibliographie
 \RequirePackage{titlesec}						% Titelbefehle neu definieren

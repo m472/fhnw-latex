@@ -1,5 +1,5 @@
 % Dokumentklasse für FHNW Projektarbeiten
-% Authoren: Mathias Graf, Jean-Paul John, Marc Leisi
+% Autoren: Mathias Graf, Jean-Paul John, Marc Leisi
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{profhnw}
@@ -8,6 +8,7 @@
 
 \LoadClass[a4paper, fleqn]{article}
 
+\RequirePackage{xkeyval}                        % Handling von Argumenten der Klasse
 \RequirePackage[utf8]{inputenc}					% Umlaute im Quelltext
 \RequirePackage[margin=2.5cm]{geometry}			% Seitenformat
 \RequirePackage[T1]{fontenc}					% für Umlaute im PDF
@@ -42,14 +43,28 @@
 \RequirePackage{lipsum}							% Fülltext
 \RequirePackage{subcaption}						% Beschriftungen von mehreren zusammengehörigen Bildern
 \RequirePackage[font={small,it}]{caption}		% Bildlegenden kursiv und etwas kleiner als Text
-\RequirePackage[parfill]{parskip}				% Extra-Linespace statt Einrückung zwischen den Absätzen
+%\RequirePackage[parfill]{parskip}				% Extra-Linespace statt Einrückung zwischen den Absätzen
 \RequirePackage{colortbl}						% Farben in Tabellen
 \RequirePackage{tikz-qtree}						% Baumdiagramme
 \RequirePackage{tabularx} 						% für an Seitenbreite angepasste Tabelle
+\RequirePackage{etoolbox}
 
 % TikZ Bibliotheken
 \usetikzlibrary{shapes, arrows, calc, intersections, through}
 
+% Mechanismus um das Logo zu setzen
+\def\logo{}
+\def\graphicslogo{}
+
+\define@key{profhnw.cls}{logo}[]{%
+    \def\logo{#1}%
+}
+
+\define@key{profhnw.cls}{graphicslogo}[]{%
+    \def\graphicslogo{#1}%
+}
+
+\ProcessOptionsX%
 
 \pagestyle{fancy}								% Seitenstil 'fancy' (mit Header)
 \setlength{\headheight}{26pt}					% Header so hoch machen, dass das FHNW-Logo reinpasst
@@ -86,14 +101,20 @@
 \let\appendixpagename\appendixname}
 
 % Neue Seite für jede Section
-\newcommand{\sectionbreak}{\clearpage}
+%\newcommand{\sectionbreak}{\clearpage}
 
 % Paragraph Format anpassen
 \titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 \titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{0.5em}
 
 % Kopf- und Fusszeile
-\lhead{\includegraphics[width=0.3\linewidth]{FHNW_HT}}		% Kopfzeile links
+
+\lhead{
+    \ifdefempty{\logo}{}%
+        {\ifdefempty{\graphicslogo}%
+                {\logo}%
+                {\includegraphics{\logo}}%
+}}	                                                        % Kopfzeile links 
 \chead{}													% Kopfzeile mittig
 \rhead{\rightmark}											% Kopfzeile rechts
 \lfoot{\today}												% Fusszeile links											

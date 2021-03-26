@@ -77,8 +77,8 @@
 
 
 % Konfiguration Biblatex gemäss Vorgaben im Leitfaden
-\DeclareNameAlias{sortname}{last-first}
-\DeclareNameAlias{default}{last-first}
+\DeclareNameAlias{sortname}{family-based}
+\DeclareNameAlias{default}{family-based}
 \DeclareFieldFormat[article]{volume}{~(#1)}
 \DeclareFieldFormat[online]{url}{\newline \textsc{Url:} \url{#1}}
 

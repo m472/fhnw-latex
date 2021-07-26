@@ -22,9 +22,6 @@
 \RequirePackage{setspace} 						% Zeilenabstand Einstellen
 \RequirePackage[nottoc,numbib]{tocbibind}		% Literaturverzeichnis im Inhaltsverzeichnis
 \RequirePackage{pdfpages}						% PDFs anhängen
-\RequirePackage[backend=biber, 
-				style=authoryear]
-			   {biblatex}						% Bibliographie
 \RequirePackage{titlesec}						% Titelbefehle neu definieren
 \RequirePackage{microtype}						% Bessere Typographie (Optischer Randausgleich etc.)
 \RequirePackage{float}							% Bilder zentrieren
@@ -55,6 +52,7 @@
 % Mechanismus um das Logo zu setzen
 \def\logo{}
 \def\graphicslogo{}
+\def\citestyle{}
 
 \define@key{profhnw.cls}{logo}[]{%
     \def\logo{#1}%
@@ -64,7 +62,16 @@
     \def\graphicslogo{#1}%
 }
 
+\define@key{profhnw.cls}{citestyle}[]{%
+    \def\citestyle{#1}%
+}
+
 \ProcessOptionsX%
+
+\RequirePackage[backend=biber,
+                style=\ifdefempty{\citestyle}{authoryear}{\citestyle},
+                citestyle=\ifdefempty{\citestyle}{authoryear}{\citestyle}]
+			   {biblatex}						% Bibliographie
 
 \pagestyle{fancy}								% Seitenstil 'fancy' (mit Header)
 \setlength{\headheight}{26pt}					% Header so hoch machen, dass das FHNW-Logo reinpasst
@@ -75,7 +82,6 @@
 % Tabellenbeschriftung oben
 \captionsetup[table]{font={normalfont,footnotesize}, singlelinecheck=off, position=above}
 
-
 % Konfiguration Biblatex gemäss Vorgaben im Leitfaden
 \DeclareNameAlias{sortname}{family-given}
 \DeclareNameAlias{default}{family-given}
@@ -85,7 +91,11 @@
 % o.J. für Einträge mit fehlendem Datum
 \newcommand{\mkbibnodate}{o\adddot\,J\adddot}
 \AtEveryCitekey{\iffieldundef{labelyear}{\restorefield{labelyear}{\mkbibnodate}}{}}
-\AtEveryBibitem{\iffieldundef{labelyear}{\restorefield{year}{\mkbibnodate}}{}}
+\AtEveryBibitem{\iffieldundef{year}{\restorefield{year}{\mkbibnodate}}{}}
+
+% Zeige nur Jahr, nicht noch Tag und Monat im Quellenverzeichnis
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryBibitem{\clearfield{day}}
 
 % URLs nur bei @Online
 \AtEveryBibitem{%
@@ -125,3 +135,4 @@
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}				% Norm eines Vektors
 
 \endinput
+
